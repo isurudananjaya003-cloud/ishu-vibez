@@ -1,0 +1,228 @@
+<style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+    #top {
+    font-size: 3.5em;
+    text-align: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    padding: 50px 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-family: 'Righteous', sans-serif;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+    }
+    h1, h2, h3 {
+      margin: 20px;
+    }
+
+    .blue {
+      color: #1589FF;
+      margin: 0 20px;
+    }
+
+    .photo-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 40px 20px;
+    }
+
+    .photo-gallery img {
+      width: 300px;
+      height: 180px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .photo-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      width: 300px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .song-card {
+      background-color: #fff;
+      margin: 40px 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px;
+    }
+
+    .categories button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #1589FF;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .categories button:hover {
+      background-color: #0d6efd;
+    }
+
+    form {
+      margin: 40px 20px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form input[type="submit"] {
+      background-color: #1589FF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0d6efd;
+    }
+
+    #up {
+      text-align: right;
+      margin: 20px;
+    }
+
+    #up img {
+      cursor: pointer;
+    }
+
+        .new-songs-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin: 20px;
+    }
+
+    .song-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    }
+
+    .song-item:hover {
+    transform: translateY(-5px);
+    }
+
+    .song-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    }
+
+    .song-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color: #333;
+    }
+
+    .song-item p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+    }
+
+
+        /* Navigation Bar */
+    .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    padding: 15px 30px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    flex-wrap: wrap;
+    }
+
+    .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    }
+
+    .search-box input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    max-width: 100%;
+    }
+
+    .menu {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    }
+
+    .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s;
+    }
+
+    .menu a:hover {
+    color: #ffe082;
+    }
+
+    .user-options a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    }
+
+    .user-options a:hover {
+    text-decoration: underline;
+    }
+
+
+    </style>
