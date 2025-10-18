@@ -20,35 +20,11 @@
     text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     letter-spacing: 2px;
     }
-    h1, h2, h3 {
+    h1, h2{
       margin: 20px;
     }
 
-    .blue {
-      color: #1589FF;
-      margin: 0 20px;
-    }
 
-    .photo-gallery {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin: 40px 20px;
-    }
-
-    .photo-gallery img {
-      width: 300px;
-      height: 180px;
-      object-fit: cover;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      transition: transform 0.3s;
-    }
-
-    .photo-gallery img:hover {
-      transform: scale(1.05);
-    }
 
     .search-bar {
       text-align: center;
@@ -57,19 +33,13 @@
 
     .search-bar input {
       padding: 10px;
-      width: 300px;
+      width: 700px; /* increased from 300px */
+      max-width: 100%; /* responsive fallback */
       font-size: 1em;
       border-radius: 5px;
       border: 1px solid #ccc;
     }
 
-    .song-card {
-      background-color: #fff;
-      margin: 40px 20px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
 
     .categories {
       display: flex;
@@ -94,7 +64,7 @@
 
     form {
       margin: 40px 20px;
-      background-color: #fff;
+      background-color: #e2e2e2;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -129,7 +99,7 @@
       cursor: pointer;
     }
 
-        .new-songs-section {
+    .new-songs-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
@@ -137,7 +107,7 @@
     }
 
     .song-item {
-    background: #fff;
+    background: #f0e6e6;
     border-radius: 10px;
     padding: 15px;
     text-align: center;
@@ -160,12 +130,12 @@
     .song-item h3 {
     margin: 10px 0 5px;
     font-size: 1.2em;
-    color: #333;
+    color: #000000;
     }
 
     .song-item p {
     margin: 0;
-    color: #666;
+    color: #5f5f5f;
     font-size: 0.9em;
     }
 
@@ -242,51 +212,178 @@
     font-size: 1.8em;
     font-weight: bold;
     letter-spacing: 1px;
-    color: white;
+    color: rgb(254, 254, 254);
     font-family: 'Segoe UI', sans-serif;
     }
 
-    .song-overview1 {
+
+      .balanced-video-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    margin: 40px 20px;
+    }
+
+    .video-box {
+      background-color: #e8f2f2;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', sans-serif;
+      color: #ff0000;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .video-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-box h2 {
+      color: #ca1d6b;
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
+    .video-box h3 {
+      color: #0072ff;
+      font-size: 1.2em;
+      margin-bottom: 15px;
+    }
+
+
+    .about-section, .song-types {
     background-color: #fff;
-    padding: 40px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    margin: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     font-family: 'Segoe UI', sans-serif;
     color: #333;
     }
 
-    .song-overview1 h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #0072ff;
+    .about-section h2, .song-types h2 {
+      color: #1500ffce;
+      font-size: 1.8em;
+      margin-bottom: 15px;
     }
 
-    .song-overview1 h3 {
-    font-size: 1.4em;
-    margin-top: 30px;
-    color: #1589FF;
+    .about-section p.blue {
+      font-size: 1.05em;
+      line-height: 1.6;
+      color: #94209e;
     }
 
-    .song-overview1 p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin-top: 10px;
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
     }
 
-    .song-overview1 .cta {
-    margin-top: 30px;
-    font-weight: bold;
-    color: #dd2476;
+    .categories button {
+      padding: 10px 18px;
+      border: none;
+      background-color: #1589FF;
+      color: white;
+      border-radius: 25px;
+      font-size: 0.95em;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
-    .song-overview1 a {
-    color: #0072ff;
-    text-decoration: none;
-    }
-
-    .song-overview1 a:hover {
-    text-decoration: underline;
+    .categories button:hover {
+      background-color: #301fc3;
+      transform: scale(1.05);
     }
 
 
-    </style>
+      .why-songs {
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      padding: 40px 25px;
+      margin: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    .why-songs h2 {
+      font-size: 2em;
+      color: #dd2476;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .why-songs h3 {
+      font-size: 1.3em;
+      color: #bd19b7;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .why-songs p {
+      font-size: 1.05em;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .why-songs .cta {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #dd2476;
+      text-align: center;
+    }
+
+    .why-songs a {
+      color: #0072ff;
+      text-decoration: none;
+    }
+
+    .why-songs a:hover {
+      text-decoration: underline;
+    }
+
+     .photo-gallery-section {
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      padding: 40px 20px;
+      margin: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .photo-gallery-section h2 {
+      font-size: 2em;
+      color: #dd2476;
+      margin-bottom: 10px;
+    }
+
+    .photo-gallery-section .gallery-intro {
+      font-size: 1.05em;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .photo-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+      </style>
 
