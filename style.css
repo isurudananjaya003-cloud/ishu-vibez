@@ -246,11 +246,9 @@
     font-family: 'Segoe UI', sans-serif;
     }
 
-        .song-overview1 {
+    .song-overview1 {
     background-color: #fff;
     padding: 40px 20px;
-    margin: 40px 20px;
-    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     font-family: 'Segoe UI', sans-serif;
     color: #333;
@@ -291,3 +289,4 @@
 
 
     </style>
+
