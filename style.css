@@ -867,6 +867,43 @@
     text-align: center;
   }
 }
+/* Global container */
+section, .new-songs-section, .balanced-video-section, .photo-gallery-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Song grid */
+.new-songs-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Video grid */
+.balanced-video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 
   
       </style>
+
