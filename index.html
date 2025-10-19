@@ -7,36 +7,68 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-    <body>
-        <div id="loader">
+<body>
+
+    <div id="loader">
         <div class="spinner"></div>
         <p>Loading Ishu vibez...</p>
-        </div>
-        <script>
-        window.addEventListener("load", function() {
+    </div>
+
+    <script>
+      
+        window.addEventListener("load", function () {
             document.getElementById("loader").style.display = "none";
         });
-        </script>
 
-         <!-- Navigation Bar -->
-        <header class="navbar">
+
+        document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll("nav a");
+    
+        navLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+    
+                // Remove 'active' class from all links
+                navLinks.forEach(link => link.classList.remove("active"));
+    
+                // Add 'active' class to clicked link
+                this.classList.add("active");
+    
+                // Smooth scroll to target section
+                const targetId = this.getAttribute("href");
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+                }
+            });
+        });
+    });
+                document.addEventListener("DOMContentLoaded", function() {
+                const homeLink = document.querySelector('a[href="#home"]');
+            
+                homeLink.addEventListener("click", function(event) {
+                    event.preventDefault(); // default jump avoid
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+            });
+    </script>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
         <div class="logo">
-            <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/503566468_122200566326121595_5904132097797864414_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=BK_TUZiLH7cQ7kNvwFbDhQx&_nc_oc=AdnKxKQXh3GQm7OS0Rr5MZBc0kISJ81pFs6TLsKMaJzfdE-ejmbwCWzIhh_BNXORDvA&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=zvnT6xxugdqgJc4f2HGsJQ&oh=00_Afcv_kx1LQseNigPhJEvxk0hbpIpiABsM3LW7Xc__t2t-g&oe=68F9D854" alt="Ishu Logo">
+            <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/503566468_122200566326121595_5904132097797864414_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=BK_TUZiLH7cQ7kNvwFbDhQx&_nc_oc=AdnKxKQXh3GQm7OS0Rr5MZBc0kISJ81pFs6TLsKMaJzfdE-ejmbwCWzIhh_BNXORDvA&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=zvnT6xxugdqgJc4f2HGsJQ&oh=00_Afcv_kx1LQseNigPhJEvxk0hbpIpiABsM3LW7Xc__t2t-g&oe=68F9D854"
+                alt="Ishu Logo">
             <span>Ishu vibez</span>
-
         </div>
-                <!-- Add this inside your <header class="navbar"> -->
-        <div class="hamburger" onclick="toggleMenu()">
-        ☰
-        </div>
-
-
         <div class="search-box">
             <input type="text" placeholder="Search Artists, Songs, Albums...">
         </div>
-
-        <!-- Wrap your nav and user-options inside a container -->
-        <div class="mobile-menu" id="mobileMenu">
         <nav class="menu">
             <a href="#">All</a>
             <a href="#">Trending Songs</a>
@@ -45,14 +77,12 @@
             <a href="#">Albums</a>
             <a href="#">Top Playlists</a>
         </nav>
-
         <div class="user-options">
             <a href="#">Get Premium</a>
             <a href="#">Log In / Sign Up</a>
         </div>
-        </div>
+    </header>
 
-        </header>
 
     <div class="gallery-container">
         <h2 class="gallery-title">🎨Welcome to Ishu vibez</h2>
@@ -61,35 +91,38 @@
  
  <section class="photo-gallery-section">
         <div class="photo-gallery">
-            <img src="https://wallpapers.com/images/hd/music-4k-doodle-fhosgwe4adxuunwq.jpg">
-            <img src="https://t4.ftcdn.net/jpg/05/47/71/45/240_F_547714598_Qlic69Z1hg0hFxhRVXB7iABUwcnwnY9T.jpg">
-            <img src="https://t3.ftcdn.net/jpg/06/09/96/72/240_F_609967231_9HllLnYeQYK0fJgG9FGFVyGU60mIejMX.jpg">
-            <img src="https://t4.ftcdn.net/jpg/09/56/96/57/240_F_956965711_3A9cgWenB14QbScV1MJvs0gjoDRs9iGU.jpg">
-            <img src="https://t4.ftcdn.net/jpg/13/26/65/73/240_F_1326657320_pq1uUO9UcVv3fnkvW4hxrFzL2H4Hjxb9.jpg">
-            <img src="https://t3.ftcdn.net/jpg/11/24/93/64/360_F_1124936490_0e0d87HqnTUbbP15XqJGNWelYKg4GqLI.jpg">
-            <img src="https://t4.ftcdn.net/jpg/05/25/11/11/240_F_525111169_c16k6AGCVLgdwwNKl6kkvsKzVNaOTCaM.jpg">
-            <img src="https://t4.ftcdn.net/jpg/05/51/11/91/240_F_551119180_dO62K5yRLWX3RlzNGGmCrHZ0H7IxNAci.jpg">
+            <img src="https://wallpapers.com/images/hd/music-4k-doodle-fhosgwe4adxuunwq.jpg" alt="Music Doodle">
+            <img src="https://images.hdqwalls.com/wallpapers/lofi-girl-relaxing-morning-time-ce.jpg"
+                alt="Music Doodle">
+            <img src="https://backiee.com/static/wallpapers/560x315/393855.jpg"
+                alt="Violin Art">
+            <img src="https://t4.ftcdn.net/jpg/06/18/49/95/240_F_618499507_6n33vIodL3t9p2CtSNzR62u9Wnu0b9qq.jpg"
+                alt="Music Notes">
+            <img src="https://t4.ftcdn.net/jpg/07/36/26/17/360_F_736261797_OZCvQE0GKtKhCE0RT3fgE0TWRrrbk7DX.jpg" alt="Music Doodle">
+            <img src="https://images.hdqwalls.com/wallpapers/lofi-girl-relaxing-morning-time-ce.jpg"
+                alt="Music Doodle">
+            <img src="https://t4.ftcdn.net/jpg/05/25/11/11/240_F_525111169_c16k6AGCVLgdwwNKl6kkvsKzVNaOTCaM.jpg"
+                alt="Violin Art">
+            <img src="https://t4.ftcdn.net/jpg/05/51/11/91/240_F_551119180_dO62K5yRLWX3RlzNGGmCrHZ0H7IxNAci.jpg"
+                alt="Music Notes">
             <img src="https://t3.ftcdn.net/jpg/05/57/29/70/240_F_557297065_Hahvyj3vZWf24XSIX6UntWqWdLfpoZht.jpg">
-            <img src="https://t3.ftcdn.net/jpg/05/74/61/76/240_F_574617622_0pOanMQi8ZrgdYg4EuCPFr2twUJgvi7s.jpg">
+            <img src="https://t3.ftcdn.net/jpg/05/74/61/76/240_F_574617622_0pOanMQi8ZrgdYg4EuCPFr2twUJgvi7s.jpgzy">
             <img src="https://t4.ftcdn.net/jpg/08/02/96/03/240_F_802960301_NHObYVA9VuhyPZdGeiKqT2vXXdNq0r1h.jpg">
-            <img src="https://t4.ftcdn.net/jpg/05/88/31/87/240_F_588318794_HhQNR8qDW8mxBYeTJBQ3CG1HknC6ffuk.jpg">
 
         </div>
     </section>
-        
-        <div class="search-bar">
-            <input type="text" placeholder="🔍 සින්දු සෙවීමේ">
-        </div>
 
+    <div class="search-bar">
+        <input type="text" placeholder="🔍 සින්දු සෙවීමේ">
+    </div>
 
-        <div class="balanced-video-section">
+    <div class="balanced-video-section">
         <!-- Trending Playlist -->
         <div class="video-box">
             <h2>🎶 Sinhala Trending Playlist</h2>
             <h3>Uwado Ayshcharya Ft. DILUBeats - Me Hithata</h3>
-            <iframe width="100%" height="315"
-            src="https://www.youtube.com/embed/dB2GMQYTXGU?list=RDdB2GMQYTXGU"
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/dB2GMQYTXGU?list=RDdB2GMQYTXGU"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
             </iframe>
         </div>
 
@@ -97,16 +130,28 @@
         <div class="video-box">
             <h2>🔥 "අද දවසේ හොට්"</h2>
             <h3>මිහිරාන් - Devaduthayek</h3>
-            <iframe width="100%" height="315"
-            src="https://www.youtube.com/embed/epmgTKHHdsg?list=RDdB2GMQYTXGU"
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/epmgTKHHdsg?list=RDdB2GMQYTXGU"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
             </iframe>
         </div>
-        </div>
+    </div>
+
 
 
         <h2 style="margin:30px 20px;">🎶 අලුත්ම සිංහල සින්දු</h2>
             <div class="new-songs-section">
+              
+            <div class="song-item">
+            <img src="https://i.ytimg.com/vi/Tw6D2YrVoFU/hqdefault.jpg" alt="Hathpethi Mal">
+            <h3>Hathpethi Mal</h3>
+            <p>Artists: Iman Fernando ft. DILU Beats</p>
+            </div>
+            
+            <div class="song-item">
+            <img src="https://i.ytimg.com/vi/KbiBcFVqTRM/hqdefault.jpg" alt="Hinahena Wala (හිණැහෙන වලා)">
+            <h3>Hinahena Wala (හිණැහෙන වලා)</h3>
+            <p>Artists: Muthuja Sanahas ft. SANTHUR</p>
+            </div>
 
             <div class="song-item">
                 <img src="https://i.ytimg.com/vi/epmgTKHHdsg/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBNIcWgskSnAe08nAN6XGwDrdvLbA" alt="Dewaduthiyak">
@@ -141,6 +186,31 @@
                 <h3>Mata Aye Ona (මට ආයේ ඕනා)</h3>
                 <p>Artist: Raveen Tharuka</p>
             </div>
+            
+            <div class="song-item">
+            <img src="https://i.ytimg.com/vi/qwQdMXqy9wM/hqdefault.jpg" alt="Charikawak (චාරිකාවක්)">
+            <h3>Charikawak (චාරිකාවක්)</h3>
+            <p>Artists: Mihiran, DILU Beats, Ramidu, Iman Fernando</p>
+            </div>
+            
+            <div class="song-item">
+              <img src="https://i.ytimg.com/vi/pkforxopi7k/hqdefault.jpg" alt="2025 Mashup – DILU Beats & Mihiran">
+              <h3>2025 Mashup – DILU Beats & Mihiran</h3>
+              <p>Artists: DILU Beats, Mihiran, Iman Fernando</p>
+            </div>
+            
+            <div class="song-item">
+              <img src="https://i.ytimg.com/vi/apkyPd5TlVs/hqdefault.jpg" alt="Manoparakata Sinhala Collection">
+              <h3>Manoparakata Sinhala Collection</h3>
+              <p>Artists: DILU Beats, Mihiran</p>
+            </div>
+            
+            <div class="song-item">
+              <img src="https://i.ytimg.com/vi/XLyxEZ2RLM0/hqdefault.jpg" alt="Popular Sinhala Songs 2025">
+              <h3>Popular Sinhala Songs 2025</h3>
+              <p>Artists: Mihiran, BHASHI, DILU Beats, Sanka Dineth</p>
+            </div>
+
 
             </div>
 
@@ -168,15 +238,7 @@
         </section>
 
 
-
-        <p id="up">
-            <a href="#top">
-            <img width="40px" height="40px" src="https://cdn-icons-png.flaticon.com/512/6051/6051376.png" alt="Go to top">
-            </a>
-        </p>
-
-
-
+  <div class="container">
         <section class="why-songs">
 
         <h2>🎼 Why Songs Matter</h2>
@@ -186,7 +248,9 @@
 
         <h3>🌍 Music Across Languages</h3>
         <p>
-        We enjoy music in many languages. Each language brings its own flavor and emotions.
+            Living in a bilingual country, we enjoy music in Hindi, Punjabi, Gujarati, Marathi, Tamil, Telugu, Kannada, Malayalam, Bengali, Bhojpuri, and more. Each language brings its own flavor and emotion.
+        </p>
+
         <h3>🆕 Trending New Songs</h3>
         <p>
             New songs keep our playlists fresh and exciting.
@@ -201,22 +265,70 @@
             🎵 Discover and download the latest MP3 songs from <a href="" target="_blank">Ishu VibeZ</a>
         </p>
         </section>
+</div>
 
 
-        <form>
-            <label>ඔබේ නම:</label>
-            <input type="text" name="name">
-            <label>ඊමේල් ලිපිනය:</label>
-            <input type="email" name="email">
-            <label>පණිවිඩය:</label>
-            <textarea name="message" rows="4"></textarea>
-            <input type="submit" value="අප වෙත යොමු කරන්න">
-        </form>
 
-        <footer style="text-align:center; padding:20px; background-color:#222; color:white;">
+
+
+    <div class="container">
+        <div class="left-section">
+            <h2>About Me</h2>
+            <p>This is a sample about me section.  You can add your personal details and information here.  Make it engaging and informative.</p>
+            <p> Add another paragraph showcasing skills or experience.</p>
+            <img width="250px" height="150px" 
+             src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/503566468_122200566326121595_5904132097797864414_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=BK_TUZiLH7cQ7kNvwFbDhQx&_nc_oc=AdnKxKQXh3GQm7OS0Rr5MZBc0kISJ81pFs6TLsKMaJzfdE-ejmbwCWzIhh_BNXORDvA&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=zvnT6xxugdqgJc4f2HGsJQ&oh=00_Afcv_kx1LQseNigPhJEvxk0hbpIpiABsM3LW7Xc__t2t-g&oe=68F9D854" 
+             style="display:block; margin:20px auto; box-shadow:0px 4px 12px rgba(0,0,0,0.5); border-radius:8px;">
+        </div>
+
+        <div class="right-section">
+            <h2>Contact Us</h2>
+            <form>
+                <label>ඔබේ නම:</label>
+                <input type="text" name="name">
+                <label>ඊමේල් ලිපිනය:</label>
+                <input type="email" name="email">
+                <label>පණිවිඩය:</label>
+                <textarea name="message" rows="4"></textarea>
+                <input type="submit" value="අප වෙත යොමු කරන්න">
+            </form>
+        </div>
+    </div>
+         <header class="A1">
+      <h1>Isuru Dhananjaya</h1>
+    </header>
+    
+    <nav class="menu1">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    
+          <section id="home" class="content-section">
+        <h2>Home Section</h2>
+        <p>ආයුබෝවන්! 🎶 මෙය ඔබට නවතම සිංහල ගීත, ජනප්‍රිය ගායකයන්ගේ නිර්මාණ සහ අපේ සංස්කෘතියේ සංගීතමය රසය එකම තැනකින් අත්විඳින්න පුළුවන් ස්ථානයයි. ඔබට සන්සුන් ගීතවලින් ආරම්භ කර උද්දීපනය කරන රිද්ම දක්වා සියල්ලම මෙහි ඇත.</p>
+      </section>
+      
+      <section id="about" class="content-section">
+        <h2>About Section</h2>
+        <p>මම සිංහල සංගීතයට ආදරය කරන කෙනෙක්. මේ වෙබ් අඩවිය මගින් නව ගීත, සදාකාලික ගීත සහ අලුත්ම ගායකයන්ගේ නිර්මාණ ඔබට ගෙන එන්නයි මගේ අරමුණ. අපේ සංගීත උරුමය ගෞරවයෙන් රැකගනිමින් අලුත් හඬවල්ටත් ඉඩ දීම මගේ දැක්මයි.</p>
+      </section>
+      
+      <section id="services" class="content-section">
+        <h2>Services Section</h2>
+        <p>මෙහිදී ඔබට සකස් කළ ගීත ලැයිස්තු, ජනප්‍රිය ගායකයන් පිළිබඳ විශේෂාංග, සහ නවතම ගීත නිකුත් කිරීම් පිළිබඳ තොරතුරු සොයාගත හැක. තවද සජීවී සංගීත වැඩසටහන්, ඇල්බම් නිකුත් කිරීම් සහ ගායකයන්ගේ පසුබිම් කතාද මෙහි අන්තර්ගත වේ. ඔබ ගායකයෙක් නම්, ඔබේ නිර්මාණය මෙහි ප්‍රදර්ශනය කර විශාල ප්‍රේක්ෂකයන් වෙත ගෙන යාමට මම උදව් කරන්නම්.</p>
+      </section>
+      
+      <section id="contact" class="content-section">
+        <h2>Contact Section</h2>
+        <p>ඔබට නව ගීතයක් බෙදාගන්න හෝ එකට වැඩ කරන්න අවශ්‍ය නම්, මාව සම්බන්ධ කරගන්න. 🎤 සංගීතයට ආදරය කරන අය, ගායකයන් සහ නිෂ්පාදකයන් සමඟ සම්බන්ධ වීමට මම සතුටු වෙමි. එකට එක්ව සිංහල සංගීතය තවත් ඉදිරියට ගෙන යමු.</p>
+      </section>
+    <footer style="text-align:center; padding:20px; background-color:#222; color:white;">
         <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-1/539033922_122210854052121595_916617383122608622_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=GpjnPHHZI0MQ7kNvwGwP-T5&_nc_oc=Adl-xldvcWqLqAUaTAiaGrSSlSlkPKrGcRWepJ6RV9RLiEwWTU8uqPBIBGDAJCOZP0U&_nc_zt=24&_nc_ht=scontent-lga3-1.xx&_nc_gid=LE4YgcW7ZyPswge2sfR_HQ&oh=00_AfefZPR4gyjIGl3c-ni8MQR9Ans_1vNuNELZUert8Ej_4w&oe=68F9788D" alt="Isuru Dhananjaya" style="width:150px; height:150px; border-radius:50%; object-fit:cover;"><br>
         <strong>All credit by Isuru Dhananjaya @2025</strong>
-        </footer>
+    </footer>
+
 
 </body>
 </html>
