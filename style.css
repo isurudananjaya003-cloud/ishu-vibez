@@ -772,7 +772,11 @@
   }
 
   /* Header (A1) - NOT sticky */
+  @media (max-width: 768px) {
+  /* Header (A1) - light blur + animated entrance */
   .A1 {
+    position: relative; /* NOT sticky */
+    width: 100%;
     padding: 16px 12px;
     text-align: center;
     background: rgba(255, 255, 255, 0.6);
@@ -781,7 +785,9 @@
     border-bottom: 1px solid rgba(0,0,0,0.08);
     border-radius: 0 0 12px 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    animation: fadeSlideDown 1s ease-out;
   }
+
   .A1 h1 {
     font-size: 22px;
     margin: 0;
@@ -790,6 +796,18 @@
     text-shadow: 0 1px 2px rgba(255,255,255,0.6);
   }
 
+  /* Animation keyframes */
+  @keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
   /* Nav bar (menu1) - sticky + light blur */
   .menu1 {
     position: sticky;
@@ -915,9 +933,10 @@
 
 /* Optional: ultra-small phones fine-tune */
 @media (max-width: 360px) {
-  .A1 h1 { font-size: 20px; }
+  .h1 { font-size: 20px; }
   .menu1 a { font-size: 13px; padding: 8px 10px; }
 }
     </style>
+
 
 
