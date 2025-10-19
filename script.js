@@ -21,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (welcomeSection) {
         welcomeSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-
-      // Optional alert
-      alert(`Loading ${this.textContent.trim()} songs...`);
     });
   });
 });
@@ -59,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   userLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      alert(`Redirecting to ${this.textContent.trim()}...`);
+      // You can add redirect logic here if needed
     });
   });
 });
