@@ -3,6 +3,13 @@
 html {
   scroll-behavior: smooth;
 }
+.content-section1 {
+  display: none;
+}
+.content-section1.active {
+  display: block;
+}
+
         /* Base Reset */
         * {
             margin: 0;
@@ -1018,6 +1025,7 @@ html {
   .menu1 a { font-size: 13px; padding: 8px 10px; }
 }
     </style>
+
 
 
 
