@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <title>ISHU VIBEZ</title>
 
-  <link rel="stylesheet" href="style.css">
+ 
+  <link id="theme-style" rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+<script>
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
 
     <div id="loader">
         <div class="spinner"></div>
@@ -25,6 +32,7 @@
         <div class="search-box">
             <input type="text" placeholder="Search Artists, Songs, Albums...">
         </div>
+        
         <nav class="menu">
             <a href="#">All</a>
             <a href="#">Trending Songs</a>
@@ -32,11 +40,18 @@
             <a href="#">Old Songs</a>
             <a href="#">Albums</a>
             <a href="#">Top Playlists</a>
+            <button id="dark-mode-btn" class="mode-btn">🌙 Dark Mode</button>
+            <button id="light-mode-btn" class="mode-btn">☀️ Light Mode</button>
+
         </nav>
+
+        
+
         <div class="user-options">
             <a href="#">Get Premium</a>
             <a href="#">Log In / Sign Up</a>
         </div>
+        <div id="clock"></div>
     </header>
 
 
@@ -91,6 +106,7 @@
 
 
         <h2 id="songs" style="margin:30px 20px;">🎶 අලුත්ම සිංහල සින්දු</h2>
+
             <div class="new-songs-section">
               
             <div class="song-item">
@@ -221,13 +237,14 @@
 
 
 
-
+         <header class="A1">
+      <h1>Isuru Dhananjaya</h1>
+    </header>
 
     <div class="container">
         <div class="left-section">
             <h2>About Me</h2>
-            <p>This is a sample about me section.  You can add your personal details and information here.  Make it engaging and informative.</p>
-            <p> Add another paragraph showcasing skills or experience.</p>
+              <p class="typewriter">This is a sample about me section.  You can add your personal details and information here.  Make it engaging and informative.<br> Add another paragraph showcasing skills or experience.</p>
             <img width="250px" height="150px" 
              src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/503566468_122200566326121595_5904132097797864414_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=BK_TUZiLH7cQ7kNvwFbDhQx&_nc_oc=AdnKxKQXh3GQm7OS0Rr5MZBc0kISJ81pFs6TLsKMaJzfdE-ejmbwCWzIhh_BNXORDvA&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=zvnT6xxugdqgJc4f2HGsJQ&oh=00_Afcv_kx1LQseNigPhJEvxk0hbpIpiABsM3LW7Xc__t2t-g&oe=68F9D854" 
              style="display:block; margin:20px auto; box-shadow:0px 4px 12px rgba(0,0,0,0.5); border-radius:8px;">
@@ -246,16 +263,15 @@
             </form>
         </div>
     </div>
-         <header class="A1">
-      <h1>Isuru Dhananjaya</h1>
-    </header>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     
     <nav class="menu1">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-      <a href="#songs">Songs</a>
+      <a href="#songs" onclick="scrollToSongs(event)">Songs</a>
+      
 
     </nav>
     
@@ -288,6 +304,4 @@
   
 </body>
 </html>
-
-
 
