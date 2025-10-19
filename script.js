@@ -57,38 +57,39 @@
             });
 
             // Activate clicked menu item
-document.querySelectorAll('.menu a').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelectorAll('.menu a').forEach(b => b.classList.remove('active'));
-    this.classList.add('active');
-    alert(`Loading ${this.textContent.trim()} songs...`);
-  });
-});
+            document.querySelectorAll('.menu a').forEach(btn => {
+              btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.menu a').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                alert(`Loading ${this.textContent.trim()} songs...`);
+              });
+            });
+            
+            // Search input interaction
+            document.getElementById('searchInput').addEventListener('keyup', function(e) {
+              const query = e.target.value.trim();
+              if (query.length > 2) {
+                console.log(`Searching for: ${query}`);
+                // You can add live filtering or fetch results here
+              }
+            });
+            
+            // User options
+            document.querySelectorAll('.user-options a').forEach(btn => {
+              btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert(`Redirecting to ${this.textContent.trim()}...`);
+              });
+            });
+              document.querySelectorAll('.menu a').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  document.querySelectorAll('.menu a').forEach(b => b.classList.remove('active'));
+                  this.classList.add('active');
+                });
+              });
 
-// Search input interaction
-document.getElementById('searchInput').addEventListener('keyup', function(e) {
-  const query = e.target.value.trim();
-  if (query.length > 2) {
-    console.log(`Searching for: ${query}`);
-    // You can add live filtering or fetch results here
-  }
-});
-
-// User options
-document.querySelectorAll('.user-options a').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    alert(`Redirecting to ${this.textContent.trim()}...`);
-  });
-});
-  document.querySelectorAll('.menu a').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelectorAll('.menu a').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-    });
-  });
 
 
 
