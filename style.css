@@ -217,6 +217,52 @@ form input[type="submit"]:hover {
 .user-options a:hover {
   text-decoration: underline;
 }
+/* 📱 Mobile Responsive Layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .logo span {
+    font-size: 1.5em;
+  }
+
+  .search-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .search-box input {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .user-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .user-options a {
+    margin-left: 0;
+  }
+}
 
 /* Video Section */
 .balanced-video-section {
@@ -355,3 +401,4 @@ form input[type="submit"]:hover {
     flex-direction: column;
     align-items: flex-start;
   }
+
