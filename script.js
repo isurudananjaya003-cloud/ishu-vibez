@@ -60,3 +60,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+  function scrollToSongs(e) {
+    e.preventDefault();
+    document.getElementById("songs").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+
