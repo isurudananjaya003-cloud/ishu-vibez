@@ -4,10 +4,11 @@ window.addEventListener("load", function () {
   if (loader) loader.style.display = "none";
 });
 
-// 🔹 Smooth scroll to #welcome when any .menu a is clicked
+// 🔹 Smooth scroll to #welcome when any .menu a is clicked + show relevant section
 document.addEventListener("DOMContentLoaded", function () {
   const menuLinks = document.querySelectorAll(".menu a");
   const welcomeSection = document.getElementById("welcome");
+  const contentSections = document.querySelectorAll(".content-section1");
 
   menuLinks.forEach(link => {
     link.addEventListener("click", function (e) {
@@ -20,6 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // Scroll to welcome section
       if (welcomeSection) {
         welcomeSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      // Show relevant content section
+      const targetId = this.getAttribute("data-target");
+      contentSections.forEach(section => section.classList.remove("active"));
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.classList.add("active");
       }
     });
   });
@@ -50,13 +59,23 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// 🔹 User options interaction
+// 🔹 User options interaction + show relevant section
 document.addEventListener("DOMContentLoaded", function () {
   const userLinks = document.querySelectorAll(".user-options a");
+  const contentSections = document.querySelectorAll(".content-section1");
+
   userLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      // You can add redirect logic here if needed
+
+      // Show relevant content section
+      const targetId = this.getAttribute("data-target");
+      contentSections.forEach(section => section.classList.remove("active"));
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        targetSection.classList.add("active");
+        targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
   });
 });
