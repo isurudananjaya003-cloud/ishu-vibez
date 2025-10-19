@@ -1,6 +1,15 @@
             window.addEventListener("load", function () {
             document.getElementById("loader").style.display = "none";
         });
+              document.querySelectorAll('.menu a').forEach(button => {
+                button.addEventListener('click', function(e) {
+                  e.preventDefault(); // prevent default anchor behavior
+                  const target = document.getElementById('welcome');
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                  }
+                });
+              });
 
 
         document.addEventListener("DOMContentLoaded", function() {
@@ -89,6 +98,7 @@
                   this.classList.add('active');
                 });
               });
+
 
 
 
