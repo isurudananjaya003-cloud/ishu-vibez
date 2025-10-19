@@ -5,7 +5,6 @@
   <title>ISHU VIBEZ</title>
 
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -15,51 +14,6 @@
         <div class="spinner"></div>
         <p>Loading Ishu vibez...</p>
     </div>
-
-    <script>
-      
-        window.addEventListener("load", function () {
-            document.getElementById("loader").style.display = "none";
-        });
-
-
-        document.addEventListener("DOMContentLoaded", function() {
-        const navLinks = document.querySelectorAll("nav a");
-    
-        navLinks.forEach(link => {
-            link.addEventListener("click", function(event) {
-                event.preventDefault();
-    
-                // Remove 'active' class from all links
-                navLinks.forEach(link => link.classList.remove("active"));
-    
-                // Add 'active' class to clicked link
-                this.classList.add("active");
-    
-                // Smooth scroll to target section
-                const targetId = this.getAttribute("href");
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
-                }
-            });
-        });
-    });
-                document.addEventListener("DOMContentLoaded", function() {
-                const homeLink = document.querySelector('a[href="#home"]');
-            
-                homeLink.addEventListener("click", function(event) {
-                    event.preventDefault(); // default jump avoid
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-                });
-            });
-    </script>
 
     <!-- Navigation Bar -->
     <header class="navbar">
@@ -324,9 +278,12 @@
         <img src="https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-1/539033922_122210854052121595_916617383122608622_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=GpjnPHHZI0MQ7kNvwGwP-T5&_nc_oc=Adl-xldvcWqLqAUaTAiaGrSSlSlkPKrGcRWepJ6RV9RLiEwWTU8uqPBIBGDAJCOZP0U&_nc_zt=24&_nc_ht=scontent-lga3-1.xx&_nc_gid=LE4YgcW7ZyPswge2sfR_HQ&oh=00_AfefZPR4gyjIGl3c-ni8MQR9Ans_1vNuNELZUert8Ej_4w&oe=68F9788D" alt="Isuru Dhananjaya" style="width:150px; height:150px; border-radius:50%; object-fit:cover;"><br>
         <strong>All credit by Isuru Dhananjaya @2025</strong>
     </footer>
+<!-- ✅ JavaScript goes here -->
+  <script src="script.js"></script>
 
 
 </body>
 </html>
+
 
 
