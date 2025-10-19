@@ -247,6 +247,11 @@
             color: white;
             text-decoration: none;
             font-size: 0.95em;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ffe082;
         }
 
         .user-options a {
@@ -254,6 +259,11 @@
             color: #ffe082;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .user-options a:hover {
+            color: white;
         }
 
         /* Video Section */
@@ -303,7 +313,7 @@
 
         .about-section h2,
         .song-types h2 {
-            color: #1500ffce;
+            color: #292289ce;
             font-size: 1.8em;
             margin-bottom: 15px;
         }
@@ -349,49 +359,6 @@
             text-decoration: underline;
         }
 
-        /* Photo Gallery */
-        .photo-gallery-section {
-            background: linear-gradient(to right, #fdfbfb, #ebedee);
-            padding: 40px 20px;
-            margin: 40px 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        .photo-gallery-section h2 {
-            font-size: 2em;
-            color: #dd2476;
-            margin-bottom: 10px;
-        }
-
-        .photo-gallery-section .gallery-intro {
-            font-size: 1.05em;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 0 10px;
-        }
-
-        .photo-gallery img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .photo-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -412,8 +379,6 @@
             display: block;
             margin-top: 10px;
         }
-
-
 
         /* Mobile tweaks */
         @media (max-width: 768px) {
@@ -484,5 +449,87 @@
                 height: 220px;
             }
 
+        }
+
+        /* Photo Gallery Styles */
+        .photo-gallery-section {
+            overflow: hidden;
+        }
+         .gallery-container {
+            text-align: center;
+        }
+        .photo-gallery-section h2 {
+            font-size: 2em;
+            color: #d21b6d;
+            margin-bottom: 10px;
+        }
+        .gallery-intro {
+            font-size: 1.05em;
+            color: #ff00b3;
+            margin-bottom: 30px;
+        }
+        .photo-gallery {
+            display: flex;
+            width: calc(250px * 8); /* Adjust 250px according to image width including spacing */
+            animation: scroll-left 20s linear infinite; /* Adjust 20s for speed */
+            padding: 20px; /* Add some padding */
+        }
+
+        .photo-gallery img {
+            height: 200px; /* Adjust height as needed */
+            width: 250px;
+            object-fit: cover;
+            margin-right: 20px; /* Spacing between images */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-250px * 8)); /* Adjust 250px according to image width including spacing */
+            }
+        }
+
+        /* Responsive adjustments for photo gallery */
+        @media (max-width: 768px) {
+            .photo-gallery {
+                width: calc(150px * 8); /* Smaller width for smaller screens */
+                animation: scroll-left-mobile 15s linear infinite; /* Adjust speed for smaller screens */
+            }
+
+            .photo-gallery img {
+                height: 120px;
+                width: 150px;
+                margin-right: 10px;
+            }
+
+            @keyframes scroll-left-mobile {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-150px * 8)); /* Smaller width for smaller screens */
+                }
+            }
+        }
+
+        /* Fade-in animation */
+        .photo-gallery img {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            animation-delay: calc(var(--delay) * 0.5s); /* Add delay for each image */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
