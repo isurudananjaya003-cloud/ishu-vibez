@@ -731,9 +731,32 @@
     background-color: #ff6600; /* highlight color */
     border-radius: 5px;
     font-weight: bold;
+      }
+      html {
+        scroll-behavior: smooth; /* enables smooth scrolling */
+      }
+      .content-section {
+        text-align: center;               /* මැදට align */
+        max-width: 800px;                 /* content width limit */
+        margin: 50px auto;                /* මැදට ගෙන එනවා */
+        padding: 25px;
+        background: #f9f9f9;              /* light background */
+        border-radius: 12px;              /* rounded corners */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* soft shadow */
+      }
+      
+      .content-section h2 {
+        font-family: "Segoe UI", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #222;
+      }
+      
+      .content-section p {
+        font-family: "Noto Sans Sinhala", sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
 }
-html {
-  scroll-behavior: smooth; /* enables smooth scrolling */
 }
-
     </style>
