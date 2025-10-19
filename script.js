@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
   function scrollToSongs(e) {
     e.preventDefault();
     document.getElementById("songs").scrollIntoView({
@@ -67,4 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
       block: "start"
     });
   }
+  document.getElementById('dark-mode-btn').addEventListener('click', function () {
+  document.getElementById('theme-style').href = 'dark.css';
+});
 
+document.getElementById('light-mode-btn').addEventListener('click', function () {
+  document.getElementById('theme-style').href = 'light.css';
+});
+function updateClock() {
+  const now = new Date();
+  let h = now.getHours();
+  const m = String(now.getMinutes()).padStart(2, '0');
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  document.getElementById('clock').textContent = `${h}:${m} ${ampm}`;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
