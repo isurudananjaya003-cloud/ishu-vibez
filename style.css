@@ -324,18 +324,18 @@
             animation: fadeInUp 1.4s ease-out;
         }
 
-        .video-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0, 198, 255, 0.3); /* Updated green glow to blue glow */
-        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
         .video-box h2 {
-            color: #ffb400; /* Updated accent-secondary */
-            font-weight: bold;
-            font-size: 1.6em;
-            font-weight: 200;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
+        color: #ffb400;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
         }
 
         .video-box h3 {
@@ -343,6 +343,54 @@
             font-size: 1.2em;
             font-weight: 200;
             margin-bottom: 15px;
+        }
+                .video-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 198, 255, 0.3); /* Updated green glow to blue glow */
+        }
+
+        .video-box {
+        position: relative;
+        padding: 20px;
+        background: radial-gradient(circle at top left, #f3f1cc, #fff);
+        border-radius: 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        border: 6px solid transparent;
+        background-clip: padding-box;
+        }
+
+        .video-box::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        border-radius: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;
+        z-index: 0;
+        }
+
+        .video-box h2,
+        .video-box h3,
+        .video-box iframe {
+        position: relative;
+        z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+        .video-box {
+            border-radius: 20px;
+        }
+
+        .video-box::before {
+            opacity: 0.2;
+            background-size: contain;
+        }
         }
 
                 /* Songs Section */
@@ -653,68 +701,69 @@
                 gap: 10px;
                 padding: 15px;
                 overflow-x: auto;
-                background: rgba(255,255,255,0.9);
+                background: #ffb400;
                 backdrop-filter: blur(10px);
-                border-bottom: 1px solid var(--border-color); /* Changed color */
+                border-bottom: 1px solid var(#ff00ea); 
                 scrollbar-width: none;
                 animation: slideDown 1s ease-out;
             }
 
             .menu1::-webkit-scrollbar { display: none; }
 
-            .menu1 a {
-                flex: 0 0 auto;
-                color: var(--text-color); /* Changed color */
-                text-decoration: none;
-                font-size: 14px;
-                padding: 10px 15px;
-                border-radius: 20px;
-                background: var(--card-bg); /* Changed color */
-                border: 1px solid var(--border-color); /* Changed color */
-                font-weight: 200;
-                transition: background 0.3s ease, box-shadow 0.3s ease;
-            }
+        .menu1 a {
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #e75318, #c700b7);
+            color: white;
+            font-weight: 200;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-            .menu1 a:hover, .menu1 a.active {
-                background: var(--accent-color); /* Changed color */
-                color: #fff;
-                box-shadow: 0 4px 15px var(--hover-shadow); /* Changed color */
-            }
+        .menu1 a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(168,230,207,0.4); /* New: Enhanced glow */
+        }
 
-            /* Content Sections */
-            .content-section {
-                background: var(--card-bg); /* Changed color */
-                max-width: 800px;
-                margin: 50px auto;
-                padding: 30px;
-                border-radius: 20px;
-                box-shadow: 0 8px 25px var(--hover-shadow); /* Changed color */
-                text-align: center;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                animation: fadeInUp 1.9s ease-out;
-            }
+        .menu1 a.active {
+            background: linear-gradient(135deg, #ffe6cc, #ffb366); /* Peach gradient */
+            color: #333;
+        }
 
-            .content-section:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 12px 35px var(--hover-shadow); /* Changed color */
-            }
+         /* Content Sections */
+        .content-section {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,255,0.9));
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1.9s ease-out;
+        }
 
-            .content-section h2 {
-                font-family: "Segoe UI", sans-serif;
-                font-weight: 200;
-                font-size: 2em;
-                color: var(--text-color); /* Changed color */
-                margin-bottom: 15px;
-                letter-spacing: 0.5px;
-            }
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(28, 217, 208, 0.4);
+        }
 
-            .content-section p {
-                font-family: "Noto Sans Sinhala", sans-serif;
-                font-weight: 200;
-                font-size: 1.1em;
-                color: var(--text-color); /* Changed color */
-                line-height: 1.8;
-            }
+        .content-section h2 {
+            font-family: "Segoe UI", sans-serif;
+            font-weight: 200;
+            font-size: 2em;
+            color: #a92424;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .content-section p {
+            font-family: "Noto Sans Sinhala", sans-serif;
+            font-weight: 200;
+            font-size: 1.1em;
+            color: #080808;
+            line-height: 1.8;
+        }
 
             /* Footer */
             footer {
@@ -947,7 +996,6 @@
                 .left-section img {
                     max-width: 200px;
                 }
-
                 .content-section {
                     padding: 20px;
                 }
