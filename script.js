@@ -75,6 +75,9 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById('light-mode-btn').addEventListener('click', function () {
   document.getElementById('theme-style').href = 'light.css';
 });
+document.getElementById('normal-mode-btn').addEventListener('click', function () {
+  document.getElementById('theme-style').href = 'style.css';
+});
 function updateClock() {
   const now = new Date();
   let h = now.getHours();
@@ -86,3 +89,4 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
