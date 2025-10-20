@@ -355,12 +355,17 @@ body {
     letter-spacing: 0.5px;
 }
 
-.video-box h3 {
-    color: var(--accent-secondary);
-    font-size: 1.2em;
-    font-weight: 200;
-    margin-bottom: 15px;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+        .video-box h2 {
+        color: #194abd;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        }
 
 /* Songs Section */
 .new-songs-section {
@@ -871,5 +876,6 @@ html {
         transform: scale(1.05);
          box-shadow: 0 4px 15px rgba(168,230,207,0.3);
     }
+
 
 </style>
