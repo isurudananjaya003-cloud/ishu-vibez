@@ -1143,7 +1143,98 @@
                 transform: scale(1.05);
                 box-shadow: 0 4px 15px rgba(168,230,207,0.3);
             }
- </style>
+
+                
+                
+                           /* Greeting Popup Styles */
+            .message-box {
+                position: fixed;
+                right: 20px; /* Position on the right side */
+                top: 50%;
+                transform: translateY(-50%) scale(0.8);
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                padding: 20px 25px; /* Slightly smaller padding for side placement */
+                border-radius: 20px; /* Softer corners */
+                font-size: 1.2rem; /* Smaller font for side popup */
+                color: #fff;
+                box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                z-index: 9999;
+                opacity: 0;
+                animation: none; /* We'll control via JS */
+                text-align: center;
+                letter-spacing: 1px;
+                background-image: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                writing-mode: vertical-rl; /* Vertical text for side placement */
+                text-orientation: mixed; /* Mix horizontal and vertical for readability */
+                max-width: 150px; /* Limit width for side */
+                word-wrap: break-word;
+            }
+
+            .message-box.show {
+                animation: popInSide 0.8s ease-out forwards, fadeOutSide 1s ease-in forwards 4s; /* Show for 4s then fade */
+            }
+
+            @keyframes popInSide {
+                0% {
+                    transform: translateY(-50%) scale(0.8) translateX(50px); /* Slide in from right */
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(-50%) scale(1) translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadeOutSide {
+                to {
+                    opacity: 0;
+                    transform: translateY(-50%) scale(0.8) translateX(50px); /* Slide out to right */
+                }
+            }
+
+            /* Mobile Adjustments */
+            @media (max-width: 768px) {
+                .message-box {
+                    right: 10px;
+                    font-size: 1rem;
+                    padding: 15px 20px;
+                    max-width: 120px;
+                    writing-mode: horizontal-tb; /* Horizontal on mobile for readability */
+                    text-orientation: horizontal;
+                    top: 20px; /* Move to top on mobile */
+                    transform: translateX(0) scale(0.8);
+                }
+
+                .message-box.show {
+                    animation: popInMobile 0.8s ease-out forwards, fadeOutMobile 1s ease-in forwards 4s;
+                }
+
+                @keyframes popInMobile {
+                    0% {
+                        transform: translateX(50px) scale(0.8);
+                        opacity: 0;
+                    }
+                    100% {
+                        transform: translateX(0) scale(1);
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes fadeOutMobile {
+                    to {
+                        opacity: 0;
+                        transform: translateX(50px) scale(0.8);
+                    }
+                }
+            }
+    </style>
+
 
 
 
