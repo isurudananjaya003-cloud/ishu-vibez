@@ -123,6 +123,18 @@
             box-shadow: 0 0 10px rgba(168,230,207,0.5); /* New: Glow effect */
             outline: none;
         }
+        .video-result {
+          margin: 10px 0;
+        }
+        .video-result img {
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        .video-result a {
+          font-weight: bold;
+          text-decoration: none;
+        }
+    
 
 
         #clock {
@@ -1156,4 +1168,5 @@
                 box-shadow: 0 4px 15px rgba(168,230,207,0.3);
             }
  </style>
+
 
