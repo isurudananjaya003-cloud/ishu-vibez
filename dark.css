@@ -486,6 +486,8 @@ body {
   }
 
   .song-item {
+    background: var(--card-bg);
+    box-shadow: 0 6px 18px var(--hover-shadow);
     padding: 18px;
     border-radius: 20px;
     backdrop-filter: blur(8px);
@@ -512,7 +514,7 @@ body {
     width: 140px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px ;
+    border: 4px #ffe6cc;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
     position: relative;
@@ -525,6 +527,7 @@ body {
 
   .song-item h3 {
     font-size: 1em;
+    color: var(--text-color);
     font-weight: 300;
     margin: 8px 0 4px;
     font-family: "Noto Sans Sinhala", sans-serif;
@@ -1004,5 +1007,6 @@ html {
 
 
 </style>
+
 
 
