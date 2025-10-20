@@ -91,13 +91,15 @@ setInterval(updateClock, 1000);
 updateClock();
 
 const clientId = "e86b844bcf3742bcb4648318cc41829d";
-const redirectUri = "https://isurudananjaya003-cloud.github.io/ishu-vibez/"; // ඔබේ redirect URI එක මෙතන
+const redirectUri = "https://isurudananjaya003-cloud.github.io/ishu-vibez/";
 const scope = "user-read-private user-read-email";
 
 const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scope)}`;
+
 document.getElementById("loginBtn").addEventListener("click", () => {
   window.location.href = authUrl;
 });
+
 
 
 
