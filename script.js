@@ -89,6 +89,15 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
+  const hash = window.location.hash;
+  const token = new URLSearchParams(hash.substring(1)).get("access_token");
+
+  if (token) {
+    localStorage.setItem("spotify_token", token);
+    window.location.href = "index.html"; // redirect back to main page
+  }
+
 response_type=token
 const clientId = "e86b844bcf3742bcb4648318cc41829d";
 const redirectUri = "https://isurudananjaya003-cloud.github.io/ishu-vibez/";
@@ -99,6 +108,7 @@ const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&re
 document.getElementById("loginBtn").addEventListener("click", () => {
   window.location.href = authUrl;
 });
+
 
 
 
