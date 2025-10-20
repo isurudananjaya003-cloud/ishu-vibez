@@ -242,6 +242,33 @@
             color: #444; /* Updated from #666 for better contrast */
         }
 
+        @media (max-width: 768px) {
+        .gallery-container {
+            padding: 20px;
+            margin: 15px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .gallery-container h2 {
+            font-size: 1.8em;
+            margin-bottom: 8px;
+            text-align: center;
+            font-family: "Noto Sans Sinhala", sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .gallery-intro {
+            font-size: 1em;
+            line-height: 1.6;
+            text-align: center;
+            padding: 0 10px;
+            font-family: "Noto Sans Sinhala", sans-serif;
+            color: #333;
+        }
+        }
+        
         /* Photo Gallery */
         .photo-gallery-section {
             overflow: hidden;
@@ -382,18 +409,45 @@
         z-index: 1;
         }
 
-        @media (max-width: 768px) {
+
+                @media (max-width: 768px) {
+        .balanced-video-section {
+            grid-template-columns: 1fr;
+            margin: 20px 10px;
+            gap: 20px;
+        }
+
         .video-box {
-            border-radius: 20px;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-box h2 {
+            font-size: 1.4em;
+            margin-bottom: 8px;
+        }
+
+        .video-box h3 {
+            font-size: 1em;
+            margin-bottom: 12px;
+        }
+
+        .video-box iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
         }
 
         .video-box::before {
-            opacity: 0.2;
+            opacity: 0.15;
             background-size: contain;
+            border-radius: 30px;
         }
         }
 
-                /* Songs Section */
+        /* Songs Section */
         .new-songs-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1032,6 +1086,4 @@
                 transform: scale(1.05);
                 box-shadow: 0 4px 15px rgba(168,230,207,0.3);
             }
-
-                
  </style>
