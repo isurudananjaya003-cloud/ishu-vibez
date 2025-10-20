@@ -198,19 +198,6 @@
         }
 
 
-        /* Light mode */
-        body.light #clock {
-        background: rgba(255, 255, 255, 0.2);
-        color: #222;
-        }
-
-        /* Dark mode */
-        body.dark #clock {
-        background: rgba(0, 0, 0, 0.3);
-        color: #00ffcc;
-        }
-
-
         /* Gallery Container */
         .gallery-container {
             text-align: center;
@@ -997,5 +984,6 @@
 
 
  </style>
+
 
 
