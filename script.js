@@ -98,7 +98,7 @@ document.getElementById('searchInput').addEventListener('keypress', function(e) 
   }
 });
 
-const API_KEY = 'AIzaSyD4fMxJmywUeIu6JmLUsTwBuRot3bvHBu8';
+const API_KEY = '' ;
 
 function searchYouTubeMusic(query) {
   const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query)}&key=${API_KEY}&maxResults=10`;
@@ -123,6 +123,7 @@ function searchYouTubeMusic(query) {
     })
     .catch(error => console.error('Error fetching YouTube data:', error));
 }
+
 
 
 
