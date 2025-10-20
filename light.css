@@ -182,6 +182,35 @@
             box-shadow: 0 4px 15px rgba(18, 21, 20, 0.3);
         }
 
+                #clock {
+        font-size: 0.8em;
+        font-weight: 600;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 8px 16px;
+        border-radius: 50px;
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+
+        /* Light mode */
+        body.light #clock {
+        background: rgba(255, 255, 255, 0.2);
+        color: #222;
+        }
+
+        /* Dark mode */
+        body.dark #clock {
+        background: rgba(0, 0, 0, 0.3);
+        color: #00ffcc;
+        }
+
+
         /* Gallery Container */
         .gallery-container {
             text-align: center;
@@ -968,4 +997,5 @@
 
 
  </style>
+
 
