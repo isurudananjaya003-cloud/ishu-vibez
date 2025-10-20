@@ -91,6 +91,40 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    const query = e.target.value;
+    searchYouTubeMusic(query);
+  }
+});
+
+const API_KEY = 'AIzaSyD4fMxJmywUeIu6JmLUsTwBuRot3bvHBu8';
+
+function searchYouTubeMusic(query) {
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${encodeURIComponent(query)}&key=${API_KEY}&maxResults=10`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+      data.items.forEach(item => {
+        const videoId = item.id.videoId;
+        const title = item.snippet.title;
+        const thumbnail = item.snippet.thumbnails.default.url;
+
+        resultsDiv.innerHTML += `
+          <div class="video-result">
+            <img src="${thumbnail}" alt="${title}">
+            <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">${title}</a>
+          </div>
+        `;
+      });
+    })
+    .catch(error => console.error('Error fetching YouTube data:', error));
+}
+
+
 
 
 
