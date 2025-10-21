@@ -624,13 +624,10 @@
             animation: gridSlideIn 1.4s ease-out; /* New: Staggered grid entry */
         }
 
-        @keyframes gridSlideIn {
-            0% { opacity: 0; transform: translateY(40px) rotateX(10deg); }
-            100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
-        }
+
 
         .video-box {
-            background: radial-gradient(circle at top left, #f6f19f, #fff);
+            background: radial-gradient(circle at top left, #d9cfe1, #fff);
             padding: 25px;
             border-radius: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 180, 0, 0.1);
@@ -643,10 +640,7 @@
             background-clip: padding-box;
         }
 
-        @keyframes videoBoxFloat {
-            0% { transform: translateY(0) rotateY(0deg); }
-            100% { transform: translateY(-10px) rotateY(5deg); }
-        }
+
 
         .video-box::before {
             content: "";
@@ -662,14 +656,11 @@
             animation: sparkle 3s ease-in-out infinite; /* New: Sparkle effect */
         }
 
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.05); }
-        }
+
 
         .video-box:hover {
             transform: translateY(-10px) scale(1.05) rotateY(10deg); /* 3D hover tilt */
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 198, 255, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(192, 221, 229, 0.4);
         }
 
         .video-box h2 {
@@ -691,7 +682,7 @@
         }
 
         .video-box h2 {
-            background: linear-gradient(90deg, #ffb400, #ff6f61, #ffb400);
+            background: linear-gradient(90deg, #fcc202, #da06ff, #ff9500);
             background-size: 200% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
