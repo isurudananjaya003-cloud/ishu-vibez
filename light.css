@@ -1,4 +1,4 @@
- <style>
+<style>
 
         html {
             scroll-behavior: smooth;
@@ -24,7 +24,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-           background: linear-gradient(135deg, #a8e6cf, #d4bfff);
+            background: linear-gradient(135deg, #a8e6cf, #d4bfff);
             padding: 15px 30px;
             color: white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -122,7 +122,7 @@
 
         .user-options a {
             background: #fff;
-            color: #ff7300;
+            color: #40c091;
             padding: 8px 14px;
             border-radius: 12px;
             font-weight: 200;
@@ -141,7 +141,7 @@
         /* CSS: Mode buttons styling (smaller size with matching design) */
         .mode-btn {
             background: linear-gradient(135deg, #e8aaa4, #d4a5a5); /* Matching gradient for all */
-            color: #9d1481;
+            color: #40c091;
             padding: 5px 8px; /* Smaller padding */
             border-radius: 6px; /* Smaller radius */
             font-size: 0.8em; /* Smaller font */
@@ -217,104 +217,6 @@
             }
         }
 
-        /* CSS: Message box and user options styling with enhancements */
-        .message-box {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%) scale(0.8);
-            background: rgba(237, 131, 131, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(16px);
-            padding: 20px 25px;
-            border-radius: 20px;
-            font-size: 2.2rem;
-            color: #c4cf64;
-            box-shadow: 0 0 25px rgba(210, 103, 103, 0.2);
-            border: 2px solid rgba(207, 125, 216, 0.3);
-            z-index: 9999;
-            opacity: 0;
-            animation: none;
-            text-align: center;
-            letter-spacing: 1px;
-            background-image: linear-gradient(135deg, #be0006, #6500c3, #cb39a1);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            max-width: 150px;
-            word-wrap: break-word;
-        }
-
-        .message-box.show {
-            animation: popInSide 0.8s ease-out forwards, fadeOutSide 1s ease-in forwards 4s;
-        }
-
-        @keyframes popInSide {
-            0% {
-                transform: translateY(-50%) scale(0.8) translateX(50px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(-50%) scale(1) translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeOutSide {
-            to {
-                opacity: 0;
-                transform: translateY(-50%) scale(0.8) translateX(50px);
-            }
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .message-box {
-                right: 10px;
-                font-size: 1.5rem;
-                padding: 20px 20px;
-                max-width: 200px;
-                writing-mode: horizontal-tb;
-                text-orientation: horizontal;
-                top: 20px;
-                transform: translateX(0) scale(0.8);
-            }
-
-            .message-box.show {
-                animation: popInMobile 0.8s ease-out forwards, fadeOutMobile 1s ease-in forwards 4s;
-            }
-
-            @keyframes popInMobile {
-                0% {
-                    transform: translateX(50px) scale(0.8);
-                    opacity: 0;
-                }
-                100% {
-                    transform: translateX(0) scale(1);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes fadeOutMobile {
-                to {
-                    opacity: 0;
-                    transform: translateX(50px) scale(0.8);
-                }
-            }
-
-            .user-options {
-                gap: 8px;
-            }
-
-            .user-options a {
-                padding: 8px 12px;
-                font-size: 0.9em;
-            }
-        }
-
-
         /* Enhanced Gallery Container */
         .gallery-container {
             text-align: center;
@@ -361,7 +263,7 @@
             font-family: "Segoe UI", sans-serif;
             font-weight: bold;
             font-size: 2.5em;
-            color: #94209e;
+            color: #40c091;
             margin-bottom: 10px;
             letter-spacing: 1px;
             animation: textGlow 2s ease-in-out infinite alternate; /* New: Pulsing text glow */
@@ -418,7 +320,7 @@
         /* Enhanced Photo Gallery Section */
         .photo-gallery-section {
             overflow: hidden;
-            background: linear-gradient(135deg, #f0f8ff, #bdd7e3); /* Deeper gradient */
+            background: linear-gradient(135deg, #f0f8ff, #84ebca); /* Deeper gradient */
             padding: 20px;
             margin: 20px;
             border-radius: 25px;
@@ -590,10 +492,6 @@
             animation: gridSlideIn 1.4s ease-out; /* New: Staggered grid entry */
         }
 
-        @keyframes gridSlideIn {
-            0% { opacity: 0; transform: translateY(40px) rotateX(10deg); }
-            100% { opacity: 1; transform: translateY(0) rotateX(0deg); }
-        }
 
         .video-box {
             background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(240,248,255,0.9));
@@ -609,6 +507,7 @@
             background-clip: padding-box;
         }
 
+
         .video-box::before {
             content: "";
             position: absolute;
@@ -622,6 +521,7 @@
             z-index: 0;
             animation: sparkle 3s ease-in-out infinite; /* New: Sparkle effect */
         }
+
 
         .video-box:hover {
             transform: translateY(-10px) scale(1.05) rotateY(10deg); /* 3D hover tilt */
@@ -715,11 +615,7 @@
             animation: waveIn 1.5s ease-out; /* New: Wave-like entry */
         }
 
-        @keyframes waveIn {
-            0% { opacity: 0; transform: translateY(50px) skewY(5deg); }
-            50% { opacity: 0.5; transform: translateY(-10px) skewY(-2deg); }
-            100% { opacity: 1; transform: translateY(0) skewY(0deg); }
-        }
+
 
         .song-item {
             background: linear-gradient(135deg, #fff7f0, #eff0e1); /* Gradient for depth */
@@ -733,10 +629,6 @@
             overflow: hidden;
         }
 
-        @keyframes itemPulse {
-            0% { box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); }
-            100% { box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 111, 97, 0.2); }
-        }
 
         .song-item::before {
             content: '';
@@ -749,10 +641,6 @@
             animation: shimmerWave 3s ease-in-out infinite; /* New: Shimmer wave */
         }
 
-        @keyframes shimmerWave {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
 
         .song-item:hover {
             transform: translateY(-8px) scale(1.05) rotateX(5deg); /* 3D magnetic lift */
@@ -790,7 +678,7 @@
 
         @keyframes colorShift {
             0%, 100% { color: #009dff; }
-            50% { color: #ff61fc; }
+            50% { color: #ff00fb; }
         }
 
         .song-item p {
@@ -907,7 +795,7 @@
         }
 
         .about-section h2, .song-types h2, .why-songs h2 {
-            color:#04ffa3;
+            color:#57b5c4;
             font-size: 1.8em;
             font-weight: bold;
             margin-bottom: 15px;
@@ -1301,10 +1189,10 @@
 
         /* Header A1 */
         header.A1 {
-            background: linear-gradient(to right,  #40c091 #ffb400); /* Coral to amber */
+            background: linear-gradient(to right,  #7be4be, #7cd0ea); /* Coral to amber */
             padding: 30px;
             text-align: center;
-            border-bottom: 2px solid #dcdcdc; /* Light gray */
+            border-bottom: 2px solid #3bb578; /* Light gray */
             animation: fadeInUp 1.8s ease-out;
         }
 
@@ -1312,7 +1200,7 @@
             font-family: "Segoe UI", sans-serif;
             font-weight: 200;
             font-size: 2.5em;
-            color: #ffffff;
+            color:  #5d16d8;
             letter-spacing: 1px;
         }
 
@@ -1338,7 +1226,7 @@
             text-decoration: none;
             padding: 10px 16px;
             border-radius: 20px;
-            background: linear-gradient(135deg, #40c091; #c700b7);
+            background: linear-gradient(135deg, #9740c0, #ff7300);
             color: white;
             font-weight: 200;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1639,13 +1527,7 @@
             html {
                 scroll-behavior: smooth;
             }
-
-
-
-
-
- </style>
-
+</style>
 
 
 
