@@ -609,11 +609,6 @@
             background-clip: padding-box;
         }
 
-        @keyframes videoBoxFloat {
-            0% { transform: translateY(0) rotateY(0deg); }
-            100% { transform: translateY(-10px) rotateY(5deg); }
-        }
-
         .video-box::before {
             content: "";
             position: absolute;
@@ -626,11 +621,6 @@
             opacity: 0.3;
             z-index: 0;
             animation: sparkle 3s ease-in-out infinite; /* New: Sparkle effect */
-        }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0.3; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.05); }
         }
 
         .video-box:hover {
@@ -1655,6 +1645,7 @@
 
 
  </style>
+
 
 
 
