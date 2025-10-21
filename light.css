@@ -996,20 +996,35 @@
         scroll-behavior: smooth;
     }
 
-    .mode-btn {
-        background: #e8aaa4;
-        color: #9d1481;
-        padding: 8px 14px;
-        border-radius: 12px;
-        font-weight: 200;
-        border: none;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        margin-right: 5px;
-    }
+        /* CSS: Mode buttons styling (smaller size with matching design) */
+        .mode-btn {
+            background: linear-gradient(135deg, #e8aaa4, #d4a5a5); /* Matching gradient for all */
+            color: #9d1481;
+            padding: 5px 8px; /* Smaller padding */
+            border-radius: 6px; /* Smaller radius */
+            font-size: 0.8em; /* Smaller font */
+            font-weight: 200;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            margin-right: 5px; /* Spacing between buttons */
+            display: inline-block; /* Ensure inline for matching layout */
+        }
 
-    .mode-btn:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 15px rgba(168,230,207,0.3);
-    }
+        .mode-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(168,230,207,0.4); /* Enhanced glow for matching effect */
+            background: linear-gradient(135deg, #f5c6cb, #e8aaa4); /* Subtle hover gradient */
+        }
+
+        /* Mobile adjustments for matching responsiveness */
+        @media (max-width: 768px) {
+            .mode-btn {
+                padding: 4px 6px; /* Even smaller on mobile */
+                font-size: 0.7em;
+                border-radius: 4px;
+            }
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala&display=swap');
 </style>
