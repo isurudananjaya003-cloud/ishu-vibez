@@ -615,14 +615,23 @@
                 font-size: 0.9em;
             }
         }
-        /* Enhanced Video Section */
+.balanced-video-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-rows: repeat(2, auto);   /* Two rows */
+  gap: 30px;
+  margin: 40px 20px;
+  animation: gridSlideIn 1.4s ease-out;
+}
+
+        /* Enhanced Video Section 
         .balanced-video-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 30px;
             margin: 40px 20px;
             animation: gridSlideIn 1.4s ease-out; /* New: Staggered grid entry */
-        }
+        } 
 
 
 
@@ -1680,6 +1689,7 @@
 
 
  </style>
+
 
 
 
